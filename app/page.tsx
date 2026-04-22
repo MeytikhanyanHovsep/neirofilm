@@ -1,5 +1,5 @@
 import About from "@/components/sections/about";
-import Advantages from "@/components/sections/advantages";
+// import Advantages from "@/components/sections/advantages";
 import Cases from "@/components/sections/cases";
 import Expertise from "@/components/sections/expertise";
 import Faq from "@/components/sections/faq";
