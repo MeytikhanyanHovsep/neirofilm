@@ -79,7 +79,7 @@ export default function Header() {
                 <li
                   key={i}
                   onClick={() => scrollToElement(e[0])}
-                  className="text-[15px] hover:text-primary whitespace-nowrap text-white tracking-[-3%] leading-[129%] cursor-pointer max-lg:text-[25px]"
+                  className="text-[15px] hover:text-primary whitespace-nowrap text-white tracking-[-3%] leading-[129%] transition-colors duration-300 cursor-pointer max-lg:text-[25px]"
                 >
                   {e[1]}
                 </li>

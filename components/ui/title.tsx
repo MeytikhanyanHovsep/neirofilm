@@ -19,7 +19,7 @@ export default function Title({
 }: Props) {
   return (
     <div
-      className={`flex flex-col  gap-11 ${dir == "c" ? "items-center text-center mx-auto" : ""} ${styles}`}
+      className={`flex flex-col  gap-11 max-lg:gap-[22px] ${dir == "c" ? "items-center text-center mx-auto" : ""} ${styles}`}
       style={{ maxWidth: width + "px" }}
     >
       <h2 className="text-balance max-lg:text-[34px] text-[57px] tracking-[-5%] leading-[97%]">
@@ -27,7 +27,7 @@ export default function Title({
       </h2>
       {desc && (
         <p
-          className={`text-white/66 w-3/5 text-balance text-[15px] leading-[135%] ${descStyles}`}
+          className={`text-white/66 md:w-3/5 text-balance text-[15px] leading-[135%] ${descStyles}`}
         >
           {desc}
         </p>

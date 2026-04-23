@@ -77,7 +77,7 @@ export default function Hero() {
             src="/images/icons/check.svg"
             height={18}
             width={18}
-            className="w-[18px] object-contain "
+            className="w-[18px] md:hidden object-contain "
             alt="✓"
           />
           Создаём AI-видео для компаний, брендов и шоу-проектов — от
