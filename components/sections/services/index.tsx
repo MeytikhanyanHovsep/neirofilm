@@ -75,7 +75,7 @@ export default function Services() {
           <div className="flex gap-2 max-md:hidden">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className={`w-[67px] transition-opacity duration-300 h-[67px] bg-white/26 rounded-full grid place-items-center ${isBeg ? "opacity-45" : " cursor-pointer"}`}
+              className={`w-[67px] transition-opacity duration-300 h-[67px] bg-white/26 rounded-full grid place-items-center cursor-pointer opacity-45 hover:opacity-100`}
             >
               <Image
                 src="/images/icons/arrow-right.svg"
@@ -87,7 +87,7 @@ export default function Services() {
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className={`w-[67px] transition-opacity duration-300 h-[67px] bg-white/26 rounded-full grid place-items-center ${isEnd ? "opacity-45" : " cursor-pointer"}`}
+              className={`w-[67px] transition-opacity duration-300 h-[67px] bg-white/26 rounded-full grid place-items-center cursor-pointer opacity-45 hover:opacity-100`}
             >
               <Image
                 src="/images/icons/arrow-right.svg"

@@ -1,7 +1,5 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import "swiper/css";
-import Image from "next/image";
 import { Case } from ".";
 
 export default function VideoCard({ video, title }: Case) {
@@ -39,24 +37,24 @@ export default function VideoCard({ video, title }: Case) {
   };
 
   return (
-    <div className="group cursor-pointer gap-[19px] flex w-full flex-col overflow-hidden! relative">
-      <div className="relative flex-1 w-full cursor-pointer max-h-[484px] lg:max-h-[520px] rounded-[20px] overflow-hidden">
+    <div className="group cursor-pointer gap-4 lg:gap-[19px] flex w-full max-w-[472px] flex-col relative h-full mx-auto">
+      <div className="relative flex-1 w-full cursor-pointer rounded-[20px] overflow-hidden bg-zinc-900">
         <video
           ref={videoRef}
           src={video}
           loop
           muted
           playsInline
-          className="w-full h-[520px] object-cover cursor-pointer"
+          className="w-full h-[50vh] min-h-[350px] lg:h-[calc(100vh-350px)] lg:max-h-[520px] object-cover cursor-pointer"
           onClick={togglePlay}
         />
         <button
           onClick={togglePlay}
-          className={`absolute inset-0 flex items-center justify-center  ${isPlaying ? "opacity-0" : "opacity-100"} transition-opacity bg-black/20 `}
+          className={`absolute inset-0 flex items-center justify-center ${isPlaying ? "opacity-0" : "opacity-100"} transition-opacity bg-black/20`}
         >
           <div className="w-[82px] h-[82px] cursor-pointer flex items-center justify-center rounded-full bg-white/20 relative backdrop-blur-md">
             <div
-              className={`w-4.5 h-5 flex justify-between  rounded-sm transition-opacity duration-300 ${isPlaying ? "opacity-100" : "opacity-0"}`}
+              className={`w-4.5 h-5 flex justify-between rounded-sm transition-opacity duration-300 ${isPlaying ? "opacity-100" : "opacity-0"}`}
             >
               <div className="bg-white h-full w-1.5 rounded-[3px]"></div>
               <div className="bg-white h-full w-1.5 rounded-[3px]"></div>
@@ -76,7 +74,7 @@ export default function VideoCard({ video, title }: Case) {
           </div>
         </button>
       </div>
-      <p className="text-[24px] max-md:hidden leading-[135%] flex items-start text-balance">
+      <p className="text-[20px] lg:text-[24px] max-md:hidden leading-[135%] flex items-start text-balance shrink-0">
         {title}
       </p>
     </div>

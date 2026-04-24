@@ -67,7 +67,12 @@ export default function Advantages() {
       </div>
       <div className="overflow-x-auto pt-8 pl-[50px] max-lg:pl-[20px] w-full min-[1110px]:hidden flex gap-[11px] scrollbar-hide">
         {items.map((e, i) => (
-          <MobileItem key={i} ind={"0" + i} title={e.title} desc={e.desc} />
+          <MobileItem
+            key={i}
+            ind={"0" + (i + 1)}
+            title={e.title}
+            desc={e.desc}
+          />
         ))}
       </div>
     </section>

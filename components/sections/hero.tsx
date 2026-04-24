@@ -6,41 +6,51 @@ export default function Hero() {
   const videos = [
     {
       w: 370,
+      video: "/videos/hero.mp4",
     },
     {
       w: 280,
+      video: "/videos/hero.mp4",
     },
     {
       w: 435,
+      video: "/videos/hero.mp4",
     },
     {
       w: 279,
+      video: "/videos/hero.mp4",
     },
     {
       w: 312,
+      video: "/videos/hero.mp4",
     },
     {
       w: 312,
+      video: "/videos/hero.mp4",
     },
     {
       w: 387,
+      video: "/videos/hero.mp4",
     },
     {
       w: 372,
+      video: "/videos/hero.mp4",
     },
     {
-      video: "/images/video-prev-2.png",
-
       w: 372,
+      video: "/videos/hero.mp4",
     },
     {
       w: 201,
+      video: "/videos/hero.mp4",
     },
     {
       w: 387,
+      video: "/videos/hero.mp4",
     },
     {
       w: 387,
+      video: "/videos/hero.mp4",
     },
   ];
   return (

@@ -11,12 +11,14 @@ export default function Videos({ data }: { data: any[] }) {
               className={`h-[218px] max-md:h-[170px] rounded-[15px] overflow-hidden ${i == 2 ? "max-md:w-[321px]!" : ""} ${i == 0 ? "max-md:w-[400px]!" : ""} `}
               style={{ width: e.w + "px" }}
             >
-              <Image
-                src={e.video || "/images/video-prev.png"}
-                height={400}
-                width={220}
-                className={`h-[218px] max-md:h-[170px] w-full object-center object-cover   `}
-                alt=">"
+              <video
+                src={e.video}
+                poster="/images/video-prev.png"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-[218px] max-md:h-[170px] w-full object-center object-cover"
               />
             </div>
           ))}
@@ -28,12 +30,14 @@ export default function Videos({ data }: { data: any[] }) {
               className={`h-[218px] max-md:h-[170px] rounded-[15px] overflow-hidden ${i == 2 ? "max-md:w-[274px]!" : ""} ${i == 0 ? "max-md:w-[234px]!" : ""} ${i == 3 ? "max-md:w-[148px]!" : ""} `}
               style={{ width: e.w + "px" }}
             >
-              <Image
-                src={e.video || "/images/video-prev.png"}
-                height={400}
-                width={220}
-                className="h-[218px] max-md:h-[170px] w-full object-center object-cover "
-                alt=">"
+              <video
+                src={e.video}
+                poster="/images/video-prev.png"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-[218px] max-md:h-[170px] w-full object-center object-cover"
               />
             </div>
           ))}

@@ -36,7 +36,7 @@ export default function Expertise() {
   return (
     <section
       id="expertise"
-      className="container max-lg:pt-[78px] pt-[186px] flex flex-col items-center"
+      className="container mb-[100px] max-lg:pt-[78px] pt-[186px] flex flex-col items-center"
     >
       <Title width={570} dir="c">
         Опыт в производстве ИИ-видео
