@@ -19,6 +19,17 @@ export default function Footer() {
     { icon: "mail.svg", link: "#" },
   ];
 
+  const scrollToElement = (id: string) => {
+    const element = document.getElementById(id);
+    console.log(element, id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <footer
       id="contacts"
@@ -44,20 +55,28 @@ export default function Footer() {
           </div>
           <div className="ml-10 max-[800px]:ml-0 max-md:mt-[31px] max-lg:flex-col min-[1200px]:-ml-10 max-lg:col-span-1 max-sm:gap-[35px] max-[1200px]:col-span-2 gap-[50px] max flex justify-between">
             <div className="flex max-lg:order-3 pt-4 max-md:gap-[42px] gap-[87px]">
-              <div className="flex flex-col text-white/77 max-md:text-white/47 tracking-[-3%] leading-[129%] text-[13px] uppercase font-normal gap-[13px]">
+              <ul className="flex flex-col text-white/77 max-md:text-white/47 tracking-[-3%] leading-[129%] text-[13px] uppercase font-normal gap-[13px]">
                 {menu.slice(0, Math.ceil(menu.length / 2)).map((e, i) => (
-                  <Link key={i} href={e[0]} className="max-md:text-[15px]">
+                  <li
+                    onClick={() => scrollToElement(e[0])}
+                    key={i}
+                    className="max-md:text-[15px]"
+                  >
                     {e[1]}
-                  </Link>
+                  </li>
                 ))}
-              </div>
-              <div className="flex flex-col text-white/77 max-md:text-white/47 tracking-[-3%] leading-[129%] text-[13px] uppercase font-normal gap-[13px]">
+              </ul>
+              <ul className="flex flex-col text-white/77 max-md:text-white/47 tracking-[-3%] leading-[129%] text-[13px] uppercase font-normal gap-[13px]">
                 {menu.slice(Math.ceil(menu.length / 2)).map((e, i) => (
-                  <Link key={i} href={e[0]} className="max-md:text-[15px]">
+                  <li
+                    key={i}
+                    onClick={() => scrollToElement(e[0])}
+                    className="max-md:text-[15px]"
+                  >
                     {e[1]}
-                  </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
             <div className="flex items-start flex-col">
               <a

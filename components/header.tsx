@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useLenis } from "lenis/react";
 import Button from "./ui/button";
 import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isBlurred, setIsBlurred] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,15 +43,13 @@ export default function Header() {
     ["contacts", "Контакты"],
   ];
 
-  const scrollToElement = (id: string) => {
-    const element = document.getElementById(id);
-    console.log(element, id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+  const scrollToElement = (target: string) => {
+    const targ = target.includes("#") ? target : "#" + target;
+    lenis?.scrollTo(targ, {
+      offset: targ === "#hero" ? -100 : 150,
+      duration: 3,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
   };
 
   return (
