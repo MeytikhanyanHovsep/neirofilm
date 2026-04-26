@@ -193,7 +193,7 @@ export default function Cases() {
 
         <div
           ref={wrapperRef}
-          className="pt-[67px] pl-[50px] max-lg:pl-5 max-lg:pt-[39px] flex scrollbar-hide gap-[22px] w-full"
+          className="pt-[67px] container overflow-visible max-lg:pt-[39px] flex scrollbar-hide gap-[22px] w-full"
         >
           <div
             ref={scrollRef}
@@ -210,7 +210,7 @@ export default function Cases() {
           </div>
         </div>
         <div className="container">
-          <p className="md:hidden mx-auto leading-[135%] w-max text-white/49 mt-[11px]">
+          <p className="md:hidden  mx-auto leading-[135%] w-max text-white/49 mt-[11px]">
             Рекламный ролик AI
           </p>
         </div>

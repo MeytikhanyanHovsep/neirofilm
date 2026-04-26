@@ -3,13 +3,21 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLayoutEffect, useRef, useState } from "react";
 
-export default function Item({ title, img, desc, top, count }: any) {
+export default function Item({
+  title,
+  img,
+  desc,
+  top,
+  count,
+  isHidden = false,
+}: any) {
   const [height, setHeight] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const [itemsLength, ind] = count;
   const [topDir, setTopDir] = useState(0);
   const [bottomDir, setBottomDir] = useState(0);
   const isLast = ind + 1 === itemsLength;
+
   useLayoutEffect(() => {
     const updateHeight = () => {
       if (ref.current) {
@@ -33,32 +41,37 @@ export default function Item({ title, img, desc, top, count }: any) {
     return () => window.removeEventListener("resize", updateHeight);
   }, [top, height]);
 
-  const opacity =
-    ind === 0 || ind === 1
-      ? topDir > 0
-        ? 1 - topDir / height
-        : 1
-      : topDir > 0
-        ? 1 - topDir / height
-        : bottomDir / height;
+  const opacity = (() => {
+    if (topDir > 0) {
+      return 1 - topDir / height;
+    }
+
+    if (isLast && !isHidden) {
+      return 1;
+    }
+
+    const appearanceDelay = 0.2;
+    const progress = bottomDir / height;
+    const delayedOpacity = (progress - appearanceDelay) / (1 - appearanceDelay);
+
+    return Math.max(0, Math.min(1, delayedOpacity));
+  })();
   const scale = 1 - (topDir / height) * 0.2;
 
   return (
     <motion.div
       style={{
-        opacity: isLast ? 1 : isNaN(opacity) ? 0 : opacity,
+        opacity: isNaN(opacity) ? 0 : opacity,
         scale: isNaN(scale) ? 1 : scale,
         transformOrigin: "top center",
-        top: isLast ? 300 : 104,
-        position: isLast ? "sticky" : "sticky",
+        top: isLast ? 504 : 104,
       }}
-      className="pt-7  border-t  max-[1110px]:hidden border-white/25 bg-[#06070B] gap-[100px] flex justify-between pb-[37px] max-[1200px]:max-w-[450px] max-[1320px]:w-[550px] max-[1450px]:w-[650px] max-[1550px]:w-[750px] w-[861px]"
+      className={`pt-7 border-t sticky!  max-[1110px]:hidden border-white/25 bg-[#06070B] gap-[100px] flex justify-between pb-[37px] max-[1200px]:max-w-[450px] backdrop-blur-lg max-[1320px]:w-[550px] max-[1450px]:w-[650px] max-[1550px]:w-[750px] w-[861px]`}
       ref={ref}
     >
       <h3 className="text-[23px] leading-[106%] flex gap-5 items-start font-medium">
-        <div className="block min-w-[9px] min-h-[9px] rounded-full bg-primary mt-[3px]"></div>
-        {/* {title} */}
-        {topDir} ---- {bottomDir} ---- {ind + 1}---{itemsLength}
+        <div className="block min-w-2.25 min-h-2.25 rounded-full bg-primary mt-0.75"></div>
+        {title}
       </h3>
       <div className="pt-0.5 w-min flex flex-col gap-[18px]">
         <Image

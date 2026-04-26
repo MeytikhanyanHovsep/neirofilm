@@ -1,8 +1,12 @@
+"use client";
 import Image from "next/image";
 import Button from "./ui/button";
 import Link from "next/link";
+import { useLenis } from "lenis/react";
 
 export default function Footer() {
+  const lenis = useLenis();
+
   const menu = [
     ["services", "Услуги"],
     ["cases", "Кейсы"],
@@ -19,15 +23,13 @@ export default function Footer() {
     { icon: "mail.svg", link: "#" },
   ];
 
-  const scrollToElement = (id: string) => {
-    const element = document.getElementById(id);
-    console.log(element, id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+  const scrollToElement = (target: string) => {
+    const targ = target.includes("#") ? target : "#" + target;
+    lenis?.scrollTo(targ, {
+      offset: targ === "#hero" ? -100 : 150,
+      duration: 3,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
   };
 
   return (

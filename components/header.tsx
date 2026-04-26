@@ -132,14 +132,17 @@ export default function Header() {
           {menu.map((e, i) => (
             <li
               key={i}
-              onClick={() => scrollToElement(e[0])}
+              onClick={() => {
+                scrollToElement(e[0]);
+                setMenuToggle(false);
+              }}
               className="text-[15px] hover:text-primary whitespace-nowrap text-white tracking-[-3%] cursor-pointer leading-[129%] max-lg:text-[25px]"
             >
               {e[1]}
             </li>
           ))}
         </ul>
-        <div className="lg:hidden fixed bottom-0 left-0 pb-6 gap-2 items-center h-full flex flex-col justify-center w-full text-center">
+        <div className="lg:hidden h-min fixed bottom-0 left-0 pb-6 gap-2 items-center flex flex-col justify-center w-full text-center">
           <Image
             src="/images/icons/plus.svg"
             height={23}
