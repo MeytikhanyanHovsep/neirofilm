@@ -173,14 +173,14 @@ export default function Cases() {
     <div
       id="cases"
       ref={targetRef}
-      className="h-[300vh] relative w-full"
+      className="h-[300vh]  relative w-full"
       style={
         containerHeight !== undefined ? { height: containerHeight } : undefined
       }
     >
       <section
         ref={sectionRef}
-        className="sticky top-0 h-screen max-w-screen overflow-hidden max-lg:pt-[89px] pt-[103px] flex flex-col"
+        className="sticky top-0 h-screen max-lg:h-min max-w-screen overflow-hidden max-lg:pt-[89px] pt-[103px] flex flex-col"
       >
         <div className="container">
           <div className="w-full">

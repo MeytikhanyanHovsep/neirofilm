@@ -7,50 +7,62 @@ export default function GetInTouch() {
     {
       w: 370,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 280,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 435,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 279,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 312,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 312,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 387,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 372,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 372,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 201,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 387,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
     {
       w: 387,
       video: "/videos/hero.mp4",
+      poster: "/images/video-prev.png",
     },
   ];
 

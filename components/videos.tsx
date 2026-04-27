@@ -13,7 +13,7 @@ export default function Videos({ data }: { data: any[] }) {
             >
               <video
                 src={e.video}
-                poster="/images/video-prev.png"
+                poster={e.poster || "/images/video-prev.png"}
                 autoPlay
                 muted
                 loop
@@ -32,7 +32,7 @@ export default function Videos({ data }: { data: any[] }) {
             >
               <video
                 src={e.video}
-                poster="/images/video-prev.png"
+                poster={e.poster || "/images/video-prev.png"}
                 autoPlay
                 muted
                 loop

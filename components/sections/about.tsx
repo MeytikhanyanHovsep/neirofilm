@@ -29,17 +29,17 @@ export default function About() {
               alt=""
             />
             <Image
-              src="/images/about.png"
-              width={1150}
+              src="/images/man.png"
+              width={500}
               height={926}
-              className="object-contain mask-[linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] max-md:scale-140 max-md:pt-[80px]  w-[1150px] z-10 absolute top-0 left-[52%] -translate-x-1/2"
+              className="object-contain about-man max-sm:max-h-125  max-md:scale-140 max-md:pt-20 max-w-full max-h-231.5 w-full z-10 absolute top-0 left-[52%] -translate-x-1/2"
               alt={`""`}
             />
           </div>
 
-          <div className="container max-lg:min-h-[1000px] max-sm:min-h-[375px] grid grid-cols-2 max-md:grid-cols-1 relative z-30">
+          <div className="container max-lg:min-h-250 max-sm:min-h-93.75 grid grid-cols-2 max-md:grid-cols-1 relative z-30">
             <div className="h-full absolute container top-1/2 max-sm:top-[60%] left-1/2 -translate-1/2 w-full grid place-items-center">
-              <div className=" w-full opacity-36 uppercase text-white/86 max-md:text-white/35 font-light flex justify-between text-[22px] max-md:text-[13px] leading-[16px] ">
+              <div className=" w-full opacity-36 uppercase text-white/86 max-md:text-white/35 font-light flex justify-between text-shadow-black text-shadow-md text-[22px] max-md:text-[13px] leading-[16px] ">
                 {lineText.split("").map((e, i) => (
                   <span key={i}>{e}</span>
                 ))}
@@ -76,7 +76,7 @@ function AboutText({
 }) {
   return (
     <div
-      className={`flex text-[17px] max-md:pb-0 pb-[120px] w-full leading-[135%]   font-normal text-balance flex-col pt-[56px]  gap-5 ${isHidden ? "pointer-events-none opacity-0 max-lg:hidden!" : ""} ${styles}`}
+      className={`flex text-[17px] max-md:pb-0 pb-[120px] w-full leading-[135%]   font-normal text-balance flex-col pt-[56px] max-sm:pt-[130px]  gap-5 ${isHidden ? "pointer-events-none opacity-0 max-lg:hidden!" : ""} ${styles}`}
     >
       <Image
         src="/images/icons/about-detail.svg"

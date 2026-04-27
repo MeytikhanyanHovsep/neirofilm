@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import { ReactLenis } from "lenis/react";
+import { ModalProvider } from "./modals";
 type Props = {
   children: React.ReactNode;
 };
@@ -18,9 +19,11 @@ export default function Components({ children }: Props) {
           smoothWheel: true,
         }}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ModalProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ModalProvider>
       </ReactLenis>
     </>
   );

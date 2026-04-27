@@ -42,11 +42,21 @@ export default function Item({
           {desc}
         </p>
       </div>
-      <Button isSmall={true} styles="w-full mt-[-7px] md:hidden">
+      <Button
+        modalVariant="tariff"
+        tariffName={type}
+        isSmall={true}
+        styles="w-full mt-[-7px] md:hidden"
+      >
         Обсудить проект
       </Button>
       <div className="md:pb-[50px] pb-[29px] max-md:px-[10px] max-md:gap-[10px] flex flex-col gap-[13px] px-4">
-        <Button isSmall={true} styles="w-full max-md:hidden">
+        <Button
+          modalVariant="tariff"
+          tariffName={type}
+          isSmall={true}
+          styles="w-full max-md:hidden"
+        >
           Обсудить проект
         </Button>
         <div className="w-full mt-[7px] max-md:hidden  flex gap-[11px] items-center">

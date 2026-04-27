@@ -66,7 +66,7 @@ export default function Item({
         transformOrigin: "top center",
         top: isLast ? 504 : 104,
       }}
-      className={`pt-7 border-t sticky!  max-[1110px]:hidden border-white/25 bg-[#06070B] gap-[100px] flex justify-between pb-[37px] max-[1200px]:max-w-[450px] backdrop-blur-lg max-[1320px]:w-[550px] max-[1450px]:w-[650px] max-[1550px]:w-[750px] w-[861px]`}
+      className={`pt-7 border-t sticky! max-[1110px]:hidden border-white/25 bg-[#06070B] gap-[100px] flex justify-between pb-[37px] max-[1200px]:max-w-[450px] backdrop-blur-lg max-[1320px]:w-[550px] max-[1450px]:w-[650px] max-[1550px]:w-[750px] w-[861px]`}
       ref={ref}
     >
       <h3 className="text-[23px] leading-[106%] flex gap-5 items-start font-medium">
