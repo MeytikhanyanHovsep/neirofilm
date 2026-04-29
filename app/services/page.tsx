@@ -8,7 +8,7 @@ export default function Services({}: Props) {
   return (
     <>
       <SecondHero />
-      <ServicesSection styles="lg:pt-[120px] pt-[80px]" />
+      <ServicesSection styles="lg:pt-[120px] lg:mb-20  pt-[80px]" />
       <GetInTouch />
     </>
   );
