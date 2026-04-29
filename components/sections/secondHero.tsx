@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Button from "../ui/button";
 
-export default function SecondHero() {
+type Props = {
+  firstText?: string;
+  secondText?: string;
+  title?: string;
+};
+
+export default function SecondHero({
+  title = "ИИ-видео под ключ - масштабный визуал без съёмок",
+  firstText = "Видео от 15 000 ₽ — без съёмок и сложного продакшна",
+  secondText = "Создаём AI-видео для компаний, брендов и шоу-проектов — от корпоративных историй до концертного визуала",
+}: Props) {
   return (
     <main
       id="hero"
@@ -25,11 +35,11 @@ export default function SecondHero() {
             alt="✓"
           />
           <p className="text-[15px] max-md:text-white/69 leading-[135%]">
-            Видео от 15 000 ₽ — без съёмок и сложного продакшна
+            {firstText}
           </p>
         </div>
         <h1 className="text-[57px] font-medium tracking-[-5%] leading-[97%] md:text-center max-w-[1000px] max-md:order-1 max-md:mb-[10px] max-md:max-w-[400px] max-md:mr-auto text-balance max-md:text-[34px]">
-          ИИ-видео под ключ - масштабный визуал без съёмок
+          {title}
         </h1>
         <p className="pb-[3px] max-md:mb-[28px] max-md:flex items-start gap-[7px] md:gap-[10px] leading-[135%] text-[15px] text-white/69 max-w-[500px] text-balance md:text-center tracking-0 max-md:order-3 ">
           <Image
@@ -39,8 +49,7 @@ export default function SecondHero() {
             className="w-[18px] md:hidden object-contain "
             alt="✓"
           />
-          Создаём AI-видео для компаний, брендов и шоу-проектов — от
-          корпоративных историй до концертного визуала
+          {secondText}
         </p>
         <Button styles="max-md:order-4 pr-5">
           Обсудить проект

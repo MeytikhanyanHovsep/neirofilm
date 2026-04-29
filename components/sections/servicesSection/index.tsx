@@ -6,13 +6,13 @@ import Item1 from "./item-1";
 import Item2 from "./item-2";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import "swiper/css";
-import "swiper/css/navigation";
 import Item3 from "./item-3";
 import Item4 from "./item-4";
 import Item5 from "./item-5";
 import Item6 from "./item-6";
 import Item7 from "./item-7";
+import "swiper/css";
+import "swiper/css/navigation";
 
 type Service = {
   title: React.ReactNode;
@@ -20,7 +20,7 @@ type Service = {
   Item: any;
 };
 
-export default function Services() {
+export default function ServicesSection({ styles }: { styles?: string }) {
   const swiperRef = useRef<any>(null);
   const [isBeg, setIsBeg] = useState<boolean>(true);
   const [isEnd, setIsEnd] = useState<boolean>(false);
@@ -67,7 +67,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className=" max-w-screen overflow-hidden max-lg:pt-[97px] pt-[233px]"
+      className={` max-w-screen overflow-hidden max-lg:pt-[97px] pt-[233px] ${styles}`}
     >
       <div className="container">
         <div className="w-full flex items-end justify-between">

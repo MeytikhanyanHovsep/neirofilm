@@ -7,7 +7,7 @@ import Faq from "@/components/sections/faq";
 import GetInTouch from "@/components/sections/getInTouch";
 import Hero from "@/components/sections/hero";
 import Pricing from "@/components/sections/pricing";
-import Services from "@/components/sections/services";
+import ServicesSection from "@/components/sections/servicesSection";
 
 export default function Home() {
   const cases: Case[] = [
@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
+      <ServicesSection />
       <Expertise />
       <Cases
         title={
