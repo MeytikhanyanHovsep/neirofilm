@@ -1,15 +1,11 @@
-import About from "@/components/sections/about";
-import Advantages from "@/components/sections/advantages";
 import Cases from "@/components/sections/cases";
 import { Case } from "@/components/sections/cases/casesSlider";
-import Expertise from "@/components/sections/expertise";
-import Faq from "@/components/sections/faq";
-import GetInTouch from "@/components/sections/getInTouch";
-import Hero from "@/components/sections/hero";
-import Pricing from "@/components/sections/pricing";
-import Services from "@/components/sections/services";
+import SecondAbout from "@/components/sections/secondAbout";
+import SecondHero from "@/components/sections/secondHero";
 
-export default function Home() {
+type Props = {};
+
+export default function About({}: Props) {
   const cases: Case[] = [
     { video: "/videos/case-1.mp4", title: "AI-реклама бренда" },
     { video: "/videos/case-1.mp4", title: "AI-реклама бренда" },
@@ -18,27 +14,20 @@ export default function Home() {
     { video: "/videos/case-1.mp4", title: "AI-реклама бренда" },
     { video: "/videos/case-1.mp4", title: "AI-реклама бренда" },
   ];
-
   return (
     <>
-      <Hero />
-      <Services />
-      <Expertise />
+      <SecondHero />
+      <SecondAbout />
       <Cases
+        type="grid"
+        cases={cases}
         title={
           <>
             ИИ-видео под ключ — <br className="min-[510px]:hidden" /> масштабный
             визуал без съёмок
           </>
         }
-        type="slider"
-        cases={cases}
       />
-      <Advantages />
-      <Pricing />
-      <About />
-      <GetInTouch />
-      <Faq />
     </>
   );
 }

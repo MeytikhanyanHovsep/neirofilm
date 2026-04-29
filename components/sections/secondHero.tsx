@@ -1,74 +1,11 @@
 import Image from "next/image";
 import Button from "../ui/button";
-import Videos from "../videos";
 
-export default function Hero() {
-  const videos = [
-    {
-      w: 370,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 280,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 435,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 279,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 312,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 312,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 387,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 372,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 372,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 201,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 387,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-    {
-      w: 387,
-      video: "/videos/hero.mp4",
-      poster: "/images/video-prev.png",
-    },
-  ];
+export default function SecondHero() {
   return (
     <main
       id="hero"
-      className="relative max-w-screen overflow-x-hidden bg-[#09090F]"
+      className="relative max-w-screen overflow-hidden h-max bg-[#09090F]"
     >
       <Image
         src="/images/lights/hero-light.png"
@@ -78,7 +15,7 @@ export default function Hero() {
         alt=""
         className="max-w-[856px] max-md:max-w-[1400px] max-md:w-[1400px] max-md:top-[-240px] max-md:left-[130%]   z-1 pointer-events-none w-[800px] max-h-[564px] mix-blend-lighten   origin-center max-md:rotate-[-25deg] rotate-[-7.12deg] top-[-65px] left-[60%] absolute -translate-x-1/2"
       />
-      <div className="container max-md:pb-[62px] pb-[77px] relative z-10 gap-5 max-md:gap-[10px] flex flex-col md:items-center max-md:pt-22.25 pt-[112px]">
+      <div className="container max-md:pb-[62px] pb-[77px] relative z-10 gap-5 max-md:gap-[10px] flex flex-col md:items-center max-md:pt-[89px] pt-[112px]">
         <div className="md:h-[42px]  md:mb-[-7px] md:backdrop-blur-[100px] md:bg-white/10 rounded-[61px] md:pl-[24px] md:pr-[34px] md:py-[10px] flex items-start md:items-center gap-[7px] md:gap-[10px] max-md:order-2">
           <Image
             src="/images/icons/check.svg"
@@ -105,7 +42,7 @@ export default function Hero() {
           Создаём AI-видео для компаний, брендов и шоу-проектов — от
           корпоративных историй до концертного визуала
         </p>
-        <Button styles="max-md:order-4 pr-2 ">
+        <Button styles="max-md:order-4 pr-5">
           Обсудить проект
           <Image
             src="/images/icons/arrow-right.svg"
@@ -116,7 +53,6 @@ export default function Hero() {
           />
         </Button>
       </div>
-      <Videos data={videos} />
     </main>
   );
 }

@@ -25,7 +25,7 @@ export default function Title({
       <h2 className="text-balance max-lg:text-[34px] text-[57px] tracking-[-5%] leading-[97%]">
         {children}
       </h2>
-      {desc && (
+      {desc && desc.length > 0 && (
         <p
           className={`text-white/66 md:w-3/5 text-balance text-[15px] leading-[135%] ${descStyles}`}
         >

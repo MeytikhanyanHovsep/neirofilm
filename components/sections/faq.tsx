@@ -75,7 +75,7 @@ export default function Faq() {
                 </h3>
 
                 <div
-                  className={`ml-auto mask-[url('/images/icons/plus.svg')] mask-size-contain mask-repeat-no-repeat max-md:min-w-3 max-md:h-3 transtion-all duration-300 mask-center bg-primary min-w-7 h-7 ${isOpen ? "rotate-45 bg-white" : ""}`}
+                  className={`ml-auto mask-[url('/images/icons/plus.svg')] mask-size-contain mask-repeat-no-repeat max-md:min-w-3 max-md:h-3 transition-all duration-300 mask-center bg-primary min-w-7 h-7 ${isOpen ? "rotate-45 bg-white" : ""}`}
                 />
               </div>
 
@@ -87,7 +87,7 @@ export default function Faq() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="pb-12 max-m:pb-[39px] max-md:pl-0 px-[7px] flex max-md:pt-[11px] pt-[19px] font-medium flex-col gap-4  max-md:text-[15px] text-[17px]">
+                    <div className="pb-12 max-md:pb-[39px] max-md:pl-0 px-[7px] flex max-md:pt-[11px] pt-[19px] font-medium flex-col gap-4  max-md:text-[15px] text-[17px]">
                       {e.answer.map((text, idx) => (
                         <p key={idx} className="leading-[135%]">
                           {text}

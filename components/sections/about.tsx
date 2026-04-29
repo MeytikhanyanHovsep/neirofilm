@@ -33,7 +33,7 @@ export default function About() {
               width={500}
               height={926}
               className="object-contain about-man max-sm:max-h-125  max-md:scale-140 max-md:pt-20 max-w-full max-h-231.5 w-full z-10 absolute top-0 left-[52%] -translate-x-1/2"
-              alt={`""`}
+              alt=""
             />
           </div>
 
@@ -83,7 +83,7 @@ function AboutText({
         width={50}
         height={40}
         className="object-contain max-md:min-h-[27px] w-min max-md:max-h-[27px] min-h-[37px] pb-0.5"
-        alt={`""`}
+        alt=""
       />
       <p className="opacity-90">
         Я режиссёр мультимедиа и работаю в видеопроизводстве более 20 лет.

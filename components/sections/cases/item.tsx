@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import { Case } from ".";
+import { Case } from "./casesSlider";
 
 export default function VideoCard({ video, title }: Case) {
   const videoRef = useRef<HTMLVideoElement>(null);
